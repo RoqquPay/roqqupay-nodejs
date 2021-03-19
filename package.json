@@ -1,0 +1,25 @@
+{
+  "name": "roqqupay-nodejs",
+  "version": "0.0.1",
+  "description": "Library for integrating roqqu apis using nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoqquPay/roqqupay-nodejs.git"
+  },
+  "author": "chibuokem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoqquPay/roqqupay-nodejs/issues"
+  },
+  "homepage": "https://github.com/RoqquPay/roqqupay-nodejs#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
