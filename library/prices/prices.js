@@ -1,21 +1,20 @@
 const  pricesService = require('../../services/prices/prices');
 class Prices{
+    
+    //get price
     async getPrices(){
-        const prices = await pricesService.getPrices();
-        return prices;
+        return await pricesService.getPrices();
     }
 
+    //get price
     async getPrice(token){
-        const price = await pricesService.getPrice(token);
-        return price;
+        return await pricesService.getPrice(token);
     }
 
+    //get price history
     async getPriceHistory(token){
-        const priceHistory = await pricesService.getPriceHistory(token);
-        return priceHistory;
+        return await pricesService.getPriceHistory(token);
     }
-
-
 
 }
 module.exports = new Prices();
