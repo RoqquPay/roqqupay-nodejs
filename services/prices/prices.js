@@ -4,12 +4,12 @@ class Prices{
     //function to get all the token prices
     async getPrices(){
         try {
-            const prices = await axios.get(baseUrl+'/prices');
+            const prices = await axios.get(`${baseUrl}/prices`);
             return prices.data;
         } catch (error) {
             console.error(error.response.data);
-            const errorResponse = error.response.data;
-            return errorResponse;
+            return error.response.data;
+
         }
     }
 

@@ -18,7 +18,7 @@ class vtu{
     //get provider data bundles
     async getDataBundes(provider){
         try {
-            const bundles = await axios.get(baseUrl+'/data/subscriptions');
+            const bundles = await axios.get(`${baseUrl}/data/subscriptions`, {params: {provider}});
             return bundles.data;
         } catch (error) {
             console.error(error.response.data);
@@ -40,7 +40,7 @@ class vtu{
     //get cable bundles
     async getCableBundles(provider){
         try {
-            const bundles = await axios.get(baseUrl+'/cable/subscriptions', {params: {provider}});
+            const bundles = await axios.get(`${baseUrl}/cable/subscriptions`, {params: {provider}});
             return bundles.data;
         } catch (error) {
             console.error(error.response.data);
@@ -51,7 +51,7 @@ class vtu{
     //verify meter number
     async verifyMeterNumber(provider, meter_type, meter_number){
         try {
-            const verifyMeter = await axios.get(baseUrl+'/verify-meter', {params: {provider, meter_type, meter_number}});
+            const verifyMeter = await axios.get(`${baseUrl}/verify-meter`, {params: {provider, meter_type, meter_number}});
             return verifyMeter.data;
         } catch (error) {
             console.error(error.response.data);
