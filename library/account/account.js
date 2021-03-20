@@ -1,31 +1,27 @@
 const accountService = require('../../services/account/account');
-class account{
+class Account{
     constructor(secretKey) {
-        this.secretKey = secretKey;
+        this.accountService = new accountService(secretKey);
     }
 
     //get account detail
     async getAccountDetail(){
-        const accountServiceClass = new accountService(this.secretKey);
-        return await accountServiceClass.getAccountDetail();
+        return await this.accountService.getAccountDetail();
     }
 
     //verify bvn
     async bvnVerify(bvn){
-        const accountServiceClass = new accountService(this.secretKey);
-        return await accountServiceClass.verifyBvn(bvn);
+        return await this.accountService.verifyBvn(bvn);
     }
 
     //resolve bank account detail
     async accountResolve(account_number, bank){
-        const accountServiceClass = new accountService(this.secretKey);
-        return await accountServiceClass.bankAccountResolve(account_number, bank);
+        return await this.accountService.bankAccountResolve(account_number, bank);
     }
 
     //get list of banks
     async getBanks(){
-        const accountServiceClass = new accountService(this.secretKey);
-        return await  accountServiceClass.getBanks();
+        return await this.accountService.getBanks();
     }
 }
-module.exports = account;
+module.exports = Account;
