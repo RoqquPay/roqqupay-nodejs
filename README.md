@@ -4,7 +4,7 @@ A library for integrating roqqupay apis using nodejs
 #installation
 You can install the package via npm :
 ```bash
-npm install roqqupay/roqqupay-nodejs
+npm install roqqupay-nodejs
 ```
 
 #Usage
