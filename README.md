@@ -51,7 +51,7 @@ npm install roqqupay/roqqupay-nodejs
        //this is the token for the wallet address you want to retrieve data for
         const token = 'btc';
        //this is the wallet address you want to retrieved data for
-       const walletAddress = '3HXoGuAFe64N1jpXo4wsjpriJKP56MPUsP'
+       const walletAddress = 'wallet address'
       const addressData = await RoqquPayClass.wallet.getWalletData(token, walletAddress);
       console.log(addressData);
  })();
