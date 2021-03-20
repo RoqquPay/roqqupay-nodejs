@@ -52,7 +52,7 @@ class Wallets{
 
     //function to send token
     async sendToken(token, amount, wallet, memo = null, tag = null){
-        const payLoad = {token, amount, wallet};
+        let payLoad = {token, amount, wallet};
         if(memo){
             payLoad.memo = memo;
         }
