@@ -1,6 +1,6 @@
 const  pricesService = require('../../services/prices/prices');
 class Prices{
-    
+
     //get price
     async getPrices(){
         return await pricesService.getPrices();

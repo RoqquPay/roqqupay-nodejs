@@ -49,5 +49,46 @@ const secretKey = '';
 //     console.log(deleteWalletAddress);
 // })();
 
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const dataBundles = await RoqquPayClass.vtu.getDataBundes('mtn');
+//     console.log(dataBundles);
+// })();
 
+//
+// const rechageAirtime = async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const recharge = await RoqquPayClass.vtu.rechargeAirtime('07039765515', '50');
+//     console.log(recharge);
+// }
+
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const getAccountData = await RoqquPayClass.account.getAccountDetail();
+//     console.log(getAccountData);
+// })();
+
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const verifyBvn = await RoqquPayClass.account.bvnVerify('bvnhere');
+//     console.log(verifyBvn);
+// })();
+
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const resolveAccount = await RoqquPayClass.account.accountResolve(3051559336, 'First Bank of Nigeria Limited');
+//     console.log(resolveAccount);
+// })();
+
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const banks = await RoqquPayClass.account.getBanks();
+//     console.log(banks);
+// })();
+
+// (async function(){
+//     const RoqquPayClass = new RoqquPay(secretKey);
+//     const cableBundles = await RoqquPayClass.vtu.getCableBundes('dstv');
+//     console.log(cableBundles);
+// })();
 
