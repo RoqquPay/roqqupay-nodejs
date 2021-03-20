@@ -7,7 +7,7 @@ You can install the package via npm :
 npm install roqqupay/roqqupay-nodejs
 ```
 
-##Usage
+#Usage
 ```javascript
    //Get all token prices
    const RoqquPay = require('roqqupay-nodejs');
