@@ -214,3 +214,40 @@ npm install roqqupay-nodejs
        console.log(resolveAccount);
  })();
 ```
+
+```javascript
+   //get roqqu account detail
+   const RoqquPay = require('roqqupay-nodejs');
+  (async function(){
+      //your roqqu secret key
+       const secretKey = 'Bearer RQ-SEC-XXXXXXXXX';
+       const RoqquPayClass = new RoqquPay(secretKey);
+       const account = await RoqquPayClass.account.getAccountDetail();
+       console.log(account);
+ })();
+```
+
+```javascript
+   //get roqqu transactions
+   const RoqquPay = require('roqqupay-nodejs');
+  (async function(){
+      //your roqqu secret key
+       const secretKey = 'Bearer RQ-SEC-XXXXXXXXX';
+       const RoqquPayClass = new RoqquPay(secretKey);
+       const transactions = await RoqquPayClass.account.getTransactions();
+       console.log(transactions);
+ })();
+```
+
+```javascript
+   //verify NIN
+   const RoqquPay = require('roqqupay-nodejs');
+  (async function(){
+      //your roqqu secret key
+       const secretKey = 'Bearer RQ-SEC-XXXXXXXXX';
+       const RoqquPayClass = new RoqquPay(secretKey);
+       const nin = 'NIN digits';
+       const verifyNin = await RoqquPayClass.account.verifyNin(nin);
+       console.log(verifyNin);
+ })();
+```

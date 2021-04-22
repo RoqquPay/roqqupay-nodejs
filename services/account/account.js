@@ -49,5 +49,28 @@ class account {
             return error.response.data;
         }
     }
+
+    //get account transactions
+    async getTransactions(){
+        try{
+            const transactions = await axios.post(`${baseUrl}/user/transactions`, {},{headers: {'Authorization' : `Bearer ${this.secretKey}`} });
+            return transactions.data;
+        }catch(error){
+            console.error(error.response.data);
+            return error.response.data;
+        }
+    }
+
+    //verify bvn
+    async verifyNin(nin)
+    {
+        try{
+            const ninVerify = await axios.post(`${baseUrl}/user/nin-verify`, {nin},{headers: {'Authorization' : `Bearer ${this.secretKey}`} });
+            return ninVerify.data;
+        }catch(error){
+            console.error(error.response.data);
+            return error.response.data;
+        }
+    }
 }
 module.exports = account;

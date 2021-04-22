@@ -23,5 +23,15 @@ class Account{
     async getBanks(){
         return await this.accountService.getBanks();
     }
+
+    //get transactions
+    async getTransactions(){
+        return await this.accountService.getTransactions();
+    }
+
+    //verify bvn
+    async verifyNin(nin){
+        return await this.accountService.verifyNin(nin);
+    }
 }
 module.exports = Account;
